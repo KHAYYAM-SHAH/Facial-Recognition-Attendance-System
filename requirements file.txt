@@ -1,0 +1,19 @@
+first of all install these libraries in your cmd.
+
+1  pip install --upgrade pip
+2  pip uninstall cmake
+3  pip ko app sy install kro yaad sy path add krna
+4  pip install flask
+4  pip install numpy
+5  pip install csv
+6  pip install opencv-python
+
+is walay sy pehle run as administration kr lena
+7  pip install opencv-contrib-python
+8  pip install pillow
+9  pip install pandas
+10 pip install dlib
+11  pip install face-recognition
+12  pip install face_recognition_models
+13  pip install openpyxl
+14  pip install 

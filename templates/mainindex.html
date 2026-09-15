@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition Attendance System</title>
+    
+    <style>
+        /* Reset body and html */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: 70px; /* Adjust height as needed */
+    background-color: rgb(2, 2, 2); /* Change to your desired color */
+    padding: 0 20px; /* Add padding for spacing */
+    box-shadow: 0 4px 6px rgba(243, 244, 245, 0.1); /* Optional shadow effect */
+}
+
+/* Logo section */
+.logo img {
+    height: 70px; /* Adjust logo height */
+    width: auto;
+}
+
+/* Navigation links */
+.nav-links ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links ul li {
+    margin: 0 15px;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #ffffff; /* Change to your desired link color */
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for links */
+.nav-links ul li a:hover {
+    color: darkblue; /* Change to your desired hover color */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    margin: 0px;
+    padding: 0px;
+    border: 2px solid black;
+    width: auto; 
+    height: 700px; 
+    background-image: url("{{ url_for('static', filename='images/new1.jpg') }}");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+h1,h2{
+    color: white;
+    margin: 50px;
+}
+.container{
+           
+    display: flex;
+    border: 1px solid black;
+        
+}
+.one, .two{
+    background-color: #393e4463;
+    background-image: url("{{ url_for('static', filename='images/table.jpg') }}");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+input[type="text"] {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    width: 200px;
+}
+form {
+    margin: 20px;
+}
+.footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+            
+            <nav class="nav-links">
+                <ul>
+     
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="title">
+    <h1>Face Recognition Attendance System</h1>
+
+    <!-- Form to Capture Faces -->
+    <h2>Capture Faces</h2>
+
+    <div class="container">
+<div class="one">
+<h2>ADD NEW USER</h2>
+    <form  action="/Capture_Image.py" method="POST">
+        <input type="text" name="id" placeholder="Enter Your ID" required>
+        <input type="text" name="name" placeholder="Enter Your Name" required>
+        <button type="submit">Capture Face and Eyes</button>
+    </form>
+</div>
+<hr>
+<div class="two">
+    <!-- Other Buttons -->
+     <h2>RECOGNITION AND ATTENDANCE</h2>
+    <button onclick="window.location.href='/check_camera.py'">Check Camera</button>
+    <button onclick="window.location.href='/Train_Image.py'">Train Images</button>
+    <button onclick="window.location.href='/Recognize.py'">Recognize & Attendance</button>
+</div>
+</div>
+<div class= "footer">
+    <p>2023 Face Recognition Attendance System. All rights reserved.</p>
+
+</div>
+</body>
+
+</html>
