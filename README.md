@@ -4,11 +4,11 @@ Recognizes faces and marks attendance automatically.
 
 Features
 
-Check camera
-Capture faces
-Train faces
-Recognize faces and log attendance
-Auto email (experimental, not fully wired in)
+1. Check camera
+2. Capture faces
+3. Train faces
+4. Recognize faces and log attendance
+5. Auto email (not functional but can be implemented)
 
 How it works
 
